@@ -42,7 +42,34 @@ subprojects {
 		testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
 		// JUnit Platform Suite Engine » 1.9.2 - Module "junit-platform-suite-engine" of JUnit 5.	
 		// https://mvnrepository.com/artifact/org.junit.platform/junit-platform-suite-engine
-		testImplementation 'org.junit.platform:junit-platform-suite-engine:1.9.2'			
+		testImplementation 'org.junit.platform:junit-platform-suite-engine:1.9.2'		
+		
+		
+	    // Mockito mock objects library core API and implementation	    
+		// https://mvnrepository.com/artifact/org.mockito/mockito-core
+		//testImplementation 'org.mockito:mockito-core:5.1.1'
+		//Mockito Inline » 5.1.1
+		//Mockito preconfigured inline mock maker (intermediate and to be superseeded by automatic usage in a future version)
+		// https://mvnrepository.com/artifact/org.mockito/mockito-inline
+		testImplementation 'org.mockito:mockito-inline:5.1.1'
+	
+	
+		// PowerMock API for Mockito 2.+..
+		// https://mvnrepository.com/artifact/org.powermock/powermock-api-mockito2
+		testImplementation 'org.powermock:powermock-api-mockito2:2.0.9'
+		// PowerMock support module for JUnit 4.x rules with Java agent		
+		// https://mvnrepository.com/artifact/org.powermock/powermock-module-junit4-rule-agent
+		testImplementation 'org.powermock:powermock-module-junit4-rule-agent:2.0.9'
+		// PowerMock support module for JUnit 4.x rules.
+		// https://mvnrepository.com/artifact/org.powermock/powermock-module-junit4-rule
+		testImplementation 'org.powermock:powermock-module-junit4-rule:2.0.9'
+		// PowerMock support module for JUnit 4.x.		
+		// https://mvnrepository.com/artifact/org.powermock/powermock-module-junit4
+		testImplementation 'org.powermock:powermock-module-junit4:2.0.9'
+		// PowerMock module for TestNG.		
+		// https://mvnrepository.com/artifact/org.powermock/powermock-module-testng
+		testImplementation 'org.powermock:powermock-module-testng:2.0.9'	
+					
 	}
 	
 	tasks.named('test') {

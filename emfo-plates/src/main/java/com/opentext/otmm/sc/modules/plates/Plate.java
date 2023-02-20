@@ -1,7 +1,6 @@
 /*
  * (C) Copyright 2021 Joaquín Garzón (http://opentext.com) and others.
  *
- *
  * Contributors:
  *   Joaquín Garzón - initial implementation
  */
@@ -13,6 +12,10 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import com.opentext.otmm.sc.modules.TextExtractor;
 
+/**
+ * Utility class to manage OCR text extracted from an car 
+ * picture, that includes a plate, once the media analysis is completed
+ **/
 public class Plate extends TextExtractor {
 	private static final String PATTERN_COUNTRY_CODE_PLATE = "^(AL|D|AND|A|B|BY|BIH|BG|CY|HR|DK|SK|SLO|E|EST|FIN|F|GR|NL|H|IRL|IS|I|LV|FL|LT|L|MK|M|MD|MC|MNE|N|PL|P|GB|CZ|RO|RUS|RSM|SRB|S|CH|UA|V)$";
 	
