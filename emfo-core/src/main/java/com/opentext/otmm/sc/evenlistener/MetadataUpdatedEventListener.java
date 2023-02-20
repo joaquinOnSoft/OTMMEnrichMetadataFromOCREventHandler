@@ -53,7 +53,7 @@ public class MetadataUpdatedEventListener extends AbstractEventLister {
 					log.info("Event handler called: " +  aClass.getName());
 				} catch (InstantiationException | IllegalAccessException | IllegalArgumentException
 						| InvocationTargetException | SecurityException | NoSuchMethodException e) {
-					log.error(e);
+					log.error("'Metadata Updated (80008)' event NOT HANDLED: ", e);
 				}
 			}
 		}

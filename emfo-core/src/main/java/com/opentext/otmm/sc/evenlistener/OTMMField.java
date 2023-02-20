@@ -14,6 +14,9 @@ public interface OTMMField {
 	public static final String CUSTOM_FIELD_CAR_PLATE_COUNTRY = "CUSTOM.FIELD.CAR.PLATE.COUNTRY";
 	public static final String CUSTOM_FIELD_CAR_BRAND = "CUSTOM.FIELD.CAR.BRAND";
 
+	public static final String CUSTOM_FNMT_FIELD_ANO ="FNMT.FIELD.ANO";
+	public static final String CUSTOM_FNMT_FIELD_VALOR ="FNMT.FIELD.VALOR";
+	
 	public static final TeamsIdentifier[] CUSTOM_CAR_FIELDS = new TeamsIdentifier[] {	
 			new TeamsIdentifier(CUSTOM_FIELD_CAR_PLATE_NUMBER),
 			new TeamsIdentifier(CUSTOM_FIELD_CAR_PLATE_COUNTRY),
