@@ -1,0 +1,5 @@
+dependencies {
+	implementation fileTree(dir: '../lib', include: '*.jar')
+	
+	implementation project(':emfo-core')	
+}

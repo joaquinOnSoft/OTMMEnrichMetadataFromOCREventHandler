@@ -1,0 +1,52 @@
+// Tested with gradle 7.3.3
+//
+// GRADLE tutorial:
+//
+// Getting Started With Gradle: Creating a Multi-Project Build
+// https://www.petrikainulainen.net/programming/gradle/getting-started-with-gradle-creating-a-multi-project-build/
+//
+// Getting Started With Gradle 
+// https://github.com/pkainulainen/gradle-examples
+subprojects {
+    apply plugin: 'java'
+
+	version = '23.02.17' 
+
+	java {
+	    sourceCompatibility = JavaVersion.VERSION_11
+	    targetCompatibility = JavaVersion.VERSION_11
+	}
+	
+    repositories {
+        mavenCentral()
+
+    }
+    
+	dependencies {	
+		// A complete, Java-based solution for accessing, manipulating, and outputting XML data		
+		// https://mvnrepository.com/artifact/org.jdom/jdom
+		implementation 'org.jdom:jdom:2.0.2'	
+		// https://mvnrepository.com/artifact/org.jdom/jdom2		
+		//implementation 'org.jdom:jdom2:2.0.6.1'
+		
+	
+		// API for Apache Log4J, a highly configurable logging tool that focuses on performance and low garbage generation. It has a plugin architecture that makes it extensible and supports asynchronous logging based on LMAX Disruptor.
+		// https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api
+		implementation 'org.apache.logging.log4j:log4j-api:2.19.0'
+		// Implementation for Apache Log4J, a highly configurable logging tool that focuses on performance and low garbage generation. It has a plugin architecture that makes it extensible and supports asynchronous logging based on LMAX Disruptor.	
+		// https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core
+		implementation 'org.apache.logging.log4j:log4j-core:2.19.0'
+		
+		// JUnit Jupiter API » 5.9.2 
+		// https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api
+		testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
+		// JUnit Platform Suite Engine » 1.9.2 - Module "junit-platform-suite-engine" of JUnit 5.	
+		// https://mvnrepository.com/artifact/org.junit.platform/junit-platform-suite-engine
+		testImplementation 'org.junit.platform:junit-platform-suite-engine:1.9.2'			
+	}
+	
+	tasks.named('test') {
+	    // Use JUnit Platform for unit tests.
+	    useJUnitPlatform()
+	}	    
+}
