@@ -1,3 +1,9 @@
+/*
+ * (C) Copyright 2023 Joaquín Garzón (http://opentext.com) and others.
+ * 
+ * Contributors:
+ *   Joaquín Garzón - initial implementation
+ */
 package com.opentext.otmm.sc.modules.coins;
 
 import java.util.regex.Matcher;

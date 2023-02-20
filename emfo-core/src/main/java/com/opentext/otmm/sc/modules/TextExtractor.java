@@ -1,3 +1,9 @@
+/*
+ * (C) Copyright 2023 Joaquín Garzón (http://opentext.com) and others.
+ * 
+ * Contributors:
+ *   Joaquín Garzón - initial implementation
+ */
 package com.opentext.otmm.sc.modules;
 
 import java.util.regex.Matcher;
@@ -5,6 +11,16 @@ import java.util.regex.Pattern;
 
 public class TextExtractor {
 
+	public TextExtractor() {
+		super();
+	}
+	
+	/**
+	 * Match multiline text using regular expression
+	 * @param txt - Base text
+	 * @param regex - Regular expression to identify a pattern
+	 * @return true if a match is found, false in other case
+	 */
 	public static boolean matchPatter(String txt, String regex) {
 		Pattern pattern = Pattern.compile(regex, Pattern.DOTALL | Pattern.MULTILINE);
 		Matcher matcher = pattern.matcher(txt);
@@ -15,9 +31,4 @@ public class TextExtractor {
 		// while matches() expects the regex to match the entire string.
 		return matcher.find();
 	}
-
-	public TextExtractor() {
-		super();
-	}
-
 }

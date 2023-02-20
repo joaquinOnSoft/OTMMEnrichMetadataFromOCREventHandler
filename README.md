@@ -1,7 +1,34 @@
 # OTMMEnrichMetadataFromOCREventHandler
-OpenText Media Management (OTMM) *event listener* to enrich metadata from information extracted from OCR once media analysis is completed.
+**OpenText Media Management (OTMM)** Event listener which listen the event **Metadata Updated (80008)**.
+This event is launched once the metadata of an asset are updated.  
 
-> **OpenText™ Media Management** is a powerful, innovative, and highly scalable digital asset management (DAM) 
-> solution that manages media assets through creation, distribution and retirement. Media Management offers 
-> an integrated, consolidated digital library for marketing, branding, commerce, broadcast, heritage, 
-> security and training content.
+> IMPORTANT: These add-on has been developed and tested on OTMM 22.4
+
+## Sub-projects 
+There are two sub-projects:
+ * [Plates](doc/plates.md): This add-on search for Spanish plate number in the OCR text found in the image
+ * [Coins](doc/coins.md): This add-on search for coin's year and value in the OCR text found in the image
+ 
+## Deployment
+
+### Event 
+
+* Browse to your *Media Management Administration Dashboard*: &lt;OTMM_BASE&gt;/teams
+* Click on `System » Event`
+
+  ![System » Event](images/otmm-dashboard-system-events.png)
+  
+* Introduce `80008` in the *Search...* text box and press *ENTER*
+
+> **80008** event means	`metadata was edited and saved`
+
+  ![System » Event](images/otmm-dashboard-system-events-8008-external-use-allowed.png)
+
+* Click on `External Use Allowed` if disabled
+
+  ![System » Event](images/otmm-dashboard-system-events-update-event.png)
+  
+* Click on `Save` button
+
+### Event manager  
+Environment > Support Manager
