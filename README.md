@@ -44,6 +44,9 @@ There are two sub-projects:
 
 * On `Upload Customization` screen:
   * **File**: Upload zip file with your customization
+
+  > **NOTE**: You can use the zip file included in the `customization` folder of this repository
+  
   * **Type**: `SERVER`
   * **Product**: `OTMM`
   
