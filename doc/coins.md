@@ -1,15 +1,14 @@
 OpenText Media Management (OTMM) Event listener which listen the event **Metadata Updated (80008)**.
 This event is launched once the metadata of an asset are updated.  
 
-This add-on search for Spanish plate number in the OCR text found in the image
+This add-on search for coin's year and value in the OCR text found in the image
 
-> IMPORTANT: These add-on has been developed and tested on OTMM 21.3
+> IMPORTANT: These add-on has been developed and tested on **OTMM 22.4**
 
-If a plate number is found, It's stored in these custom fields: 
+If a coin's year or value is found, it's stored in these custom fields: 
 
- * **CUSTOM.FIELD.CAR.PLATE.NUMBER**
- * **CUSTOM.FIELD.CAR.PLATE.COUNTRY** 
- * **CUSTOM.FIELD.CAR.BRAND**
+ * **FNMT.FIELD.ANO**
+ * **FNMT.FIELD.VALOR** 
 
 > NOTE: These custom field must be created from TEAMS administration panel.
 
