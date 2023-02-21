@@ -41,3 +41,8 @@ There are two sub-projects:
 * Click on `New customization` button  
 
   ![Environment » Support Manager » New customization](images/otmm-dashboard-support-manager-new-customization.png)
+
+* On `Upload Customization` screen:
+  * **File**: Upload zip file with your customization
+  * **Type**: `SERVER`
+  * **Product**: `OTMM`
