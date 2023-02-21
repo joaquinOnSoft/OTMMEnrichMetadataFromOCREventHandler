@@ -45,7 +45,13 @@ public class CoinTest {
 	
 	@Test
 	public void findFirstValue() {
-		assertEquals("5E", Coin.findFirstValue(COIN_ZAMORA_5_EURO));		
-		assertEquals("100 EURO", Coin.findFirstValue(COIN_EUFA_2020_100_EURO));
-	}	
+		assertEquals("5", Coin.findFirstValue(COIN_ZAMORA_5_EURO));		
+		assertEquals("100", Coin.findFirstValue(COIN_EUFA_2020_100_EURO));
+	}
+	
+	@Test
+	public void findFirstCurrency() {
+		assertEquals(Coin.CURRENCY_EURO, Coin.findFirstCurrency(COIN_ZAMORA_5_EURO));		
+		assertEquals(Coin.CURRENCY_EURO, Coin.findFirstCurrency(COIN_EUFA_2020_100_EURO));
+	}		
 }
