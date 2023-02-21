@@ -2,10 +2,11 @@
 **OpenText Media Management (OTMM)** Event listener which listen the event **Metadata Updated (80008)**.
 This event is launched once the metadata of an asset are updated.  
 
-> IMPORTANT: These add-on has been developed and tested on **OTMM 22.4**
+> IMPORTANT: These add-ons have been developed and tested on **OTMM 22.4**
 
 ## Sub-projects 
 There are two sub-projects:
+
  * [Plates](doc/plates.md): This add-on search for Spanish plate number in the OCR text found in the image
  * [Coins](doc/coins.md): This add-on search for coin's year and value in the OCR text found in the image
  
@@ -30,5 +31,8 @@ There are two sub-projects:
   
 * Click on `Save` button
 
-### Event manager  
+### External Use Allowed for Event *80008 - metadata was edited and saved*
+
+* Browse to your *Media Management Administration Dashboard*: &lt;OTMM_BASE&gt;/teams
+* Click on `Environment » Event`
 Environment > Support Manager
