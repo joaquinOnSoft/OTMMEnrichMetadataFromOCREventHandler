@@ -2,7 +2,7 @@
 **OpenText Media Management (OTMM)** Event listener which listen the event **Metadata Updated (80008)**.
 This event is launched once the metadata of an asset are updated.  
 
-> IMPORTANT: These add-on has been developed and tested on OTMM 22.4
+> IMPORTANT: These add-on has been developed and tested on **OTMM 22.4**
 
 ## Sub-projects 
 There are two sub-projects:
@@ -11,7 +11,7 @@ There are two sub-projects:
  
 ## Deployment
 
-### Event 
+### External Use Allowed for Event *80008 - metadata was edited and saved*
 
 * Browse to your *Media Management Administration Dashboard*: &lt;OTMM_BASE&gt;/teams
 * Click on `System » Event`
