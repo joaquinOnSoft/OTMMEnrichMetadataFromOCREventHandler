@@ -33,6 +33,11 @@ There are two sub-projects:
 
 ### External Use Allowed for Event *80008 - metadata was edited and saved*
 
-* Browse to your *Media Management Administration Dashboard*: &lt;OTMM_BASE&gt;/teams
-* Click on `Environment » Event`
-Environment > Support Manager
+* Login on *Media Management Administration Dashboard*: &lt;OTMM_BASE&gt;/teams as `supportmgr` or any other user with support manager option enabled
+* Click on `Environment » Support Manager`
+
+  ![Environment » Support Manager](images/otmm-dashboard-event-manager.png)
+  
+* Click on `New customization` button  
+
+  ![Environment » Support Manager » New customization](images/otmm-dashboard-event-manager-new-customization.png)
