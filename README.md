@@ -36,8 +36,8 @@ There are two sub-projects:
 * Login on *Media Management Administration Dashboard*: &lt;OTMM_BASE&gt;/teams as `supportmgr` or any other user with support manager option enabled
 * Click on `Environment » Support Manager`
 
-  ![Environment » Support Manager](images/otmm-dashboard-event-manager.png)
+  ![Environment » Support Manager](images/otmm-dashboard-support-manager.png)
   
 * Click on `New customization` button  
 
-  ![Environment » Support Manager » New customization](images/otmm-dashboard-event-manager-new-customization.png)
+  ![Environment » Support Manager » New customization](images/otmm-dashboard-support-manager-new-customization.png)
