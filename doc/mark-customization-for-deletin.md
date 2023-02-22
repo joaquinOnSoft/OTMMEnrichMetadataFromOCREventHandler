@@ -27,7 +27,7 @@ Now let's apply our changes in our containerized environment.
  * Select your OTMM pod called `otmm-0`
  * Make `CTRL + d` to delete your pod
 
-  ![pgAdmin](../images/images/k9-delete-pod-otm-0.png) 
+  ![pgAdmin](../images/k9-delete-pod-otm-0.png) 
       
  * Click `OK` button
  * Wait until the pod is *terminated* and *running*. It'll take a few minutes.
