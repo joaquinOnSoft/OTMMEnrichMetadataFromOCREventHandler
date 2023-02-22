@@ -8,7 +8,7 @@ jar {
 	
 	// https://stackoverflow.com/questions/42225363/gradle-include-class-files-from-one-project-in-another        		
 	from (project(':emfo-core').sourceSets.main.output) {
-		include 'com/opentext/otmm/sc/**'
+		include 'com/opentext/otmm/sc/*'
 	}        		        		
 }
 

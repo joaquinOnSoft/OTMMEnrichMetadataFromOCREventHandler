@@ -18,6 +18,6 @@ fi
 if [ -d "$TOMEE_HOME" ] || [ ! -d "$JBOSS_HOME" ]
 then
 	echo "Tomee Home : $TOMEE_HOME"
-	
-	cp "$PWD/OTMMEnrichMetadataFromOCREventHandler-coins-23.02.22.jar" "$TEAMS_HOME/ear/artesia/lib"
+	                                                                   
+	cp "$PWD/OTMMEnrichMetadataFromOCREventHandler-coins-23.02.22.jar" "$TEAMS_HOME/ear/artesia.ear/lib"
 fi
