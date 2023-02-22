@@ -49,7 +49,7 @@ There are two sub-projects:
   > **NOTE**: You can use the zip file included in the `customization` folder of this repository, or
   > you can follow this manual to [Prepare the customization files for upload](https://docsapi.opentext.com/docs/pi_hosted/_org/ofh1/index.html?/medmgt220400-h-agd-en/prep-upload-cust.html)
   
-  * **Description**: `Must be the same that the customization name`, in our example `OTMMEnrichMetadataFromOCREventHandler-coins-23.02.22`
+  * **Description**: `Must be the same that the customization name`, in our example *OTMMEnrichMetadataFromOCREventHandler-coins-23.02.22*
   * **Type**: `SERVER`
   * **Product**: `OTMM`
    
@@ -66,4 +66,8 @@ There are two sub-projects:
     
   
 ## Tips and tricks
+
+Just some topics related to this project that can be handly:
+
+ * [Mark OTMM customization for deletion in a containerized environment](doc/mark-customization-for-deletin.md)
  * [Required jar files](doc/required-jar.md)
