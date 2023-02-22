@@ -34,5 +34,5 @@ if exist %TOMEE_HOME% (
 	Echo Tomee Home : %TOMEE_HOME%
 	
 	Echo Installing in Installer Configuration
-	copy %CD%\\OTMMEnrichMetadataFromOCREventHandler-coins-23.02.22.jar %TEAMS_HOME%\\ear\\artesia\\lib
+	copy %CD%\\OTMMEnrichMetadataFromOCREventHandler-coins-23.02.22.jar %TEAMS_HOME%\\ear\\artesia.ear\\lib
 )

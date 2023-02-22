@@ -18,5 +18,5 @@ if [ -d "$TOMEE_HOME" ] || [ ! -d "$JBOSS_HOME" ]
 then
 	echo "Tomee Home : $TOMEE_HOME"
 	
-	rm "$TEAMS_HOME/ear/artesia/lib/OTMMEnrichMetadataFromOCREventHandler-coins-23.02.22.jar"
+	rm "$TEAMS_HOME/ear/artesia.ear/lib/OTMMEnrichMetadataFromOCREventHandler-coins-23.02.22.jar"
 fi

@@ -32,5 +32,5 @@ if exist %JBOSS_HOME% (
 
 if exist %TOMEE_HOME% (
 	Echo Tomee Home : %TOMEE_HOME%
-	del /Q %TEAMS_HOME%\\ear\\artesia\\lib\\OTMMEnrichMetadataFromOCREventHandler-coins-23.02.22.jar
+	del /Q %TEAMS_HOME%\\ear\\artesia.ear\\lib\\OTMMEnrichMetadataFromOCREventHandler-coins-23.02.22.jar
 )
