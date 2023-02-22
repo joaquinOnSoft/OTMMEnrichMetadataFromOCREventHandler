@@ -31,7 +31,7 @@ There are two sub-projects:
   
 * Click on `Save` button
 
-### External Use Allowed for Event *80008 - metadata was edited and saved*
+### Customization upload 
 
 * Login on *Media Management Administration Dashboard*: &lt;OTMM_BASE&gt;/teams as `supportmgr` or any other user with support manager option enabled
 * Click on `Environment » Support Manager`
