@@ -32,6 +32,11 @@ public class Coin  extends TextExtractor{
 		return matchPatter(txt, PATTERN_VALUE);
 	}	
 
+	/**
+	 * Find the first occurrence of a year (4 digits in a row) in the text provided
+	 * @param txt - OCR text extracted in the media analysis of a coin's picture
+	 * @return first occurrence of a year, or null 
+	 */
 	public static String findFirstYear(String txt) {
 		String year = null;
 
@@ -42,12 +47,23 @@ public class Coin  extends TextExtractor{
 
 		return year;
 	}
-
+	
+	/**
+	 * Find the first occurrence of a facial value of a coin in the text provided
+	 * @param txt - OCR text extracted in the media analysis of a coin's picture
+	 * @return first occurrence of a facial value, or null 
+	 */	
 	public static String findFirstValue(String txt) {
 		//Normalize value, remove currency reference: EURO, euro, E, Pta, pta		
 		return findFirstValueWithCurrency(txt, PATTERN_CURRENCY);
 	}
 
+	/**
+	 * Find the first occurrence of a currency name in the text provided
+	 * NOTE: This method only recognizes EURO and PTA (legacy Spanish currency)
+	 * @param txt - OCR text extracted in the media analysis of a coin's picture
+	 * @return "EUR", "PTA", or null 
+	 */		
 	public static String findFirstCurrency(String txt) {
 		//Normalize currency, remove facial value
 		String currency = findFirstValueWithCurrency(txt, PATTERN_NUMERIC_VALUE);

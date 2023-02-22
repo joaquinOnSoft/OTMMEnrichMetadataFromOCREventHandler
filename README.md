@@ -51,9 +51,18 @@ There are two sub-projects:
   
   * **Type**: `SERVER`
   * **Product**: `OTMM`
-  
+   
   ![Environment » Support Manager » New customization » Upload Customization](images/otmm-dashboard-support-manager-upload-customization.png)
+
+* Click on `Upload` button.  By default, the customization is disabled
+
+  ![Environment » Support Manager » Customization disabled](images/otmm-support-manager-customizations-customization-disabled.png)
+
+* Click on `enable` in the row that corresponds to your customization
   
+  ![Environment » Support Manager » Customization enabled](images/otmm-support-manager-customizations-customization-enabled.png)
+    
+    
   
 ## Required .jar files (included in the *lib* folder)
 
