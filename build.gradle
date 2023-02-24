@@ -28,7 +28,11 @@ subprojects {
 		implementation 'org.jdom:jdom:2.0.2'	
 		// https://mvnrepository.com/artifact/org.jdom/jdom2		
 		//implementation 'org.jdom:jdom2:2.0.6.1'
-		
+				
+		// Reflections » 0.10.2
+		// Reflections - Java runtime metadata analysis
+		// https://mvnrepository.com/artifact/org.reflections/reflections
+		implementation 'org.reflections:reflections:0.10.2'			
 	
 		// API for Apache Log4J, a highly configurable logging tool that focuses on performance and low garbage generation. It has a plugin architecture that makes it extensible and supports asynchronous logging based on LMAX Disruptor.
 		// https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api

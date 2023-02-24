@@ -9,9 +9,4 @@ jar {
 
 dependencies {
 	implementation fileTree(dir: '../lib', include: '*.jar')
-	
-	// Reflections » 0.10.2
-	// Reflections - Java runtime metadata analysis
-	// https://mvnrepository.com/artifact/org.reflections/reflections
-	implementation 'org.reflections:reflections:0.10.2'	
 }
