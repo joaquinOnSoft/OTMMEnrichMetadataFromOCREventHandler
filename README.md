@@ -69,5 +69,6 @@ There are two sub-projects:
 
 Just some topics related to this project that can be handly:
 
+ * [Event listener registration](doc/event-listener-registration.md)
  * [Mark OTMM customization for deletion in a containerized environment](doc/mark-customization-for-deletin.md)
  * [Required jar files](doc/required-jar.md)
