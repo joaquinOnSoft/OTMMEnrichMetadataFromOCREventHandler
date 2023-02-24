@@ -2,7 +2,8 @@
 **OpenText Media Management (OTMM)** Event listener which listen the event **Metadata Updated (80008)**.
 This event is launched once the metadata of an asset are updated.  
 
-> IMPORTANT: These add-ons have been developed and tested on **OTMM 22.4**
+> IMPORTANT: These add-ons have been developed and tested on a 
+> containerized **OTMM 22.4** running **TOMEE**
 
 ## Sub-projects 
 There are two sub-projects:
@@ -63,7 +64,17 @@ There are two sub-projects:
   
   ![Environment » Support Manager » Customization enabled](images/otmm-support-manager-customizations-customization-enabled.png)
     
-    
+## Event listener registration
+The event listener is registered using the `web.xml` included in the `customization` folder of this repository:
+
+```xml
+	<!-- Custom event listener (Search for coin's year and value in the OCR text found in the image) -->
+	<listener>
+		<listener-class>com.opentext.otmm.sc.evenlistener.MetadataUpdatedEventListenerRegistration</listener-class>
+	</listener>
+```    
+
+> **NOTE**: This method of registering the event listener is a **workaround** meanwhile an `official` way to do it's added in *TEAMS's* dashboard.
   
 ## Tips and tricks
 

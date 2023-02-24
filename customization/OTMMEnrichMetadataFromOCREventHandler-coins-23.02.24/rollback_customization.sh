@@ -1,27 +1,41 @@
-#!/bin/sh
+@echo off
 
-echo "Reverting OTMMEnrichMetadataFromOCREventHandler-coins-23.02.24 Customization from Installer Configuration"
+echo Reverting Coin metadata extractor custom event listener from Installer Configuration
 
-echo "Reverting web.xml without custom event listener"
+echo Deleting OTMMEnrichMetadataFromOCREventHandler-core-23.02.24.jar from %TEAMS_HOME%
 
-mv /opt/OTMM/ear/artesia/otmmux/WEB-INF/web.xml /opt/OTMM/ear/artesia/otmmux/WEB-INF/web.xml.rollback
-mv /opt/OTMM/ear/artesia/otmmux/WEB-INF/web.xml.back /opt/OTMM/ear/artesia/otmmux/WEB-INF/web.xml 
+if not defined JBOSS_HOME (
+	set JBOSS_HOME=${jboss.home}
+)
 
-echo "Deleting OTMMEnrichMetadataFromOCREventHandler-coins-23.02.24.jar to $TEAMS_HOME"
+if not defined TOMEE_HOME (
+	set TOMEE_HOME=${tomee.home}
+)
 
-rm "$TEAMS_HOME/plugins/OTMMEnrichMetadataFromOCREventHandler-coins-23.02.24.jar"
+set JBOSS_HOME=%JBOSS_HOME: =%
+set TOMEE_HOME=%TOMEE_HOME: =%
 
-if [ -d "$JBOSS_HOME" ]
-then
-	echo "Jboss Home : $JBOSS_HOME"
-	
-	cd "$TEAMS_HOME/install/ant"
-	ant -f "$TEAMS_HOME/install/ant/build.xml" "build-customizations-module"
-fi
+if "%JBOSS_HOME%"=="" (
+	set JBOSS_HOME=${jboss.home}
+)
+if "%TOMEE_HOME%"=="" (
+	set TOMEE_HOME=${tomee.home}
+)
 
-if [ -d "$TOMEE_HOME" ] || [ ! -d "$JBOSS_HOME" ]
-then
-	echo "Tomee Home : $TOMEE_HOME"
-	
-	rm "$TEAMS_HOME/ear/artesia.ear/lib/OTMMEnrichMetadataFromOCREventHandler-coins-23.02.24.jar"
-fi
+del /Q %TEAMS_HOME%\\plugins\\OTMMEnrichMetadataFromOCREventHandler-core-23.02.24.jar
+
+if exist %JBOSS_HOME% (
+	echo Jboss Home : %JBOSS_HOME%
+	cd %TEAMS_HOME%\\install\\ant
+	ant -f %TEAMS_HOME%\\install\\ant\\build.xml build-customizations-module	
+)
+
+if exist %TOMEE_HOME% (
+	echo Tomee Home : %TOMEE_HOME%
+	del /Q %TEAMS_HOME%\\ear\\artesia.ear\\lib\\OTMMEnrichMetadataFromOCREventHandler-core-23.02.24.jar
+
+	echo "Reverting web.xml without custom event listener"	
+	cp "$TEAMS_HOME/ear/artesia.ear/otmmux.war/WEB-INF/web.xml" "$TEAMS_HOME/ear/artesia.ear/otmmux.war/WEB-INF/web.xml.rollback"
+	mv "$TEAMS_HOME/ear/artesia.ear/otmmux.war/WEB-INF/web.xml.back" "$TEAMS_HOME/ear/artesia.ear/otmmux.war/WEB-INF/web.xml"		
+)
+
