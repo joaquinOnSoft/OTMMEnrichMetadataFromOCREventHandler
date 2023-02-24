@@ -65,7 +65,7 @@ There are two sub-projects:
   ![Environment » Support Manager » Customization enabled](images/otmm-support-manager-customizations-customization-enabled.png)
     
 ## Event listener registration
-The event listener is registered using the `web.xml` included in the `customization` folder of this repository:
+The event listener is registered using the `web.xml` file included in the `customization` folder of this repository:
 
 ```xml
 	<!-- Custom event listener (Search for coin's year and value in the OCR text found in the image) -->
@@ -74,7 +74,8 @@ The event listener is registered using the `web.xml` included in the `customizat
 	</listener>
 ```    
 
-> **NOTE**: This method of registering the event listener is a **workaround** meanwhile an `official` way to do it's added in *TEAMS's* dashboard.
+> **NOTE**: This method of registering the event listener is a **workaround** meanwhile 
+> an 'official' way to do it's added in *TEAMS's* dashboard.
   
 ## Tips and tricks
 
