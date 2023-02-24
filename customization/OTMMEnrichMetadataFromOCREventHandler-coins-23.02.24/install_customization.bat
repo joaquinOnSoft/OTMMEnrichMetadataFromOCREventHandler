@@ -1,8 +1,8 @@
 @echo off
 
-Echo Installing OTMMEnrichMetadataFromOCREventHandler-coins-23.02.22 Customization in Installer Configuration
+Echo Installing OTMMEnrichMetadataFromOCREventHandler-coins-23.02.24 Customization in Installer Configuration
 
-Echo Adding OTMMEnrichMetadataFromOCREventHandler-coins-23.02.22.jar to %TEAMS_HOME%
+Echo Adding OTMMEnrichMetadataFromOCREventHandler-coins-23.02.24.jar to %TEAMS_HOME%
 
 if not defined JBOSS_HOME (
 	set JBOSS_HOME=${jboss.home}
@@ -22,7 +22,7 @@ if "%TOMEE_HOME%"=="" (
 	set TOMEE_HOME=${tomee.home}
 )
 
-copy %CD%\\OTMMEnrichMetadataFromOCREventHandler-coins-23.02.22.jar %TEAMS_HOME%\\plugins
+copy %CD%\\OTMMEnrichMetadataFromOCREventHandler-coins-23.02.24.jar %TEAMS_HOME%\\plugins
 
 if exist %JBOSS_HOME% (
 	Echo Jboss Home : %JBOSS_HOME%
@@ -34,5 +34,5 @@ if exist %TOMEE_HOME% (
 	Echo Tomee Home : %TOMEE_HOME%
 	
 	Echo Installing in Installer Configuration
-	copy %CD%\\OTMMEnrichMetadataFromOCREventHandler-coins-23.02.22.jar %TEAMS_HOME%\\ear\\artesia.ear\\lib
+	copy %CD%\\OTMMEnrichMetadataFromOCREventHandler-coins-23.02.24.jar %TEAMS_HOME%\\ear\\artesia.ear\\lib
 )

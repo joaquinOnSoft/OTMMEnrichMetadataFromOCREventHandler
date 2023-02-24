@@ -1,4 +1,4 @@
-This customization will deploy a custom Jar, OTMMEnrichMetadataFromOCREventHandler-coins-23.02.22.jar.
+This customization will deploy a custom Jar, OTMMEnrichMetadataFromOCREventHandler-coins-23.02.24.jar.
 
 This add-on search for coin's year an value in the OCR text found in the picture.
 

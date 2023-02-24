@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+cvc-id.3 error in web.xml
+https://stackoverflow.com/questions/3219639/cvc-id-3-error-in-web-xml 
+-->
+<web-app xmlns="https://java.sun.com/xml/ns/javaee"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	 version="3.0">
+	<!-- uncomment for http session replication 
+	<distributable/>
+	-->
+
+	<!-- Custom event listener (Search for coin's year and value in the OCR text found in the image) -->
+	<listener>
+		<listener-class>com.opentext.otmm.sc.evenlistener.MetadataUpdatedEventListenerRegistration</listener-class>
+	</listener>
+
+    <filter>
+        <filter-name>GoFilter</filter-name>
+        <filter-class>com.opentext.ux.servlet.filter.GoFilter</filter-class>
+    </filter>
+
+    <filter>
+        <filter-name>SingleSignOnFilter</filter-name>
+        <filter-class>com.opentext.ux.servlet.filter.SingleSignOnFilter</filter-class>
+    </filter>
+
+    <filter>
+        <filter-name>NoCacheFilter</filter-name>
+        <filter-class>com.opentext.ux.servlet.filter.NoCacheFilter</filter-class>
+    </filter>
+    
+    <filter>
+    	<filter-name>StaticCacheFilter</filter-name>
+    	<filter-class>com.opentext.ux.servlet.filter.CacheFilter</filter-class>
+    	<init-param>
+    		<param-name>Cache-Control</param-name>
+    		<param-value>max-age=86400,post-check=3600</param-value>
+    	</init-param>
+    </filter>
+    
+    <filter>
+    	<filter-name>CSSCacheFilter</filter-name>
+    	<filter-class>com.opentext.ux.servlet.filter.CacheFilter</filter-class>
+    	<init-param>
+    		<param-name>Cache-Control</param-name>
+    		<param-value>max-age=60</param-value>
+    	</init-param>
+    </filter>
+    
+    <filter>
+    	<filter-name>CORSFilter</filter-name>
+    	<filter-class>com.opentext.ux.servlet.filter.CORSFilter</filter-class>
+    </filter>
+    
+    <filter>
+        <filter-name>CompressionFilter</filter-name>
+        <filter-class>com.opentext.ux.servlet.filter.GZIPFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+ </filter>
+ 
+ 	<filter>
+		<filter-name>HttpResponseHeaderFilter</filter-name>
+		<filter-class>com.opentext.ux.servlet.filter.HttpResponseHeaderFilter</filter-class>
+	</filter>
+	
+    <filter-mapping>
+        <filter-name>GoFilter</filter-name>
+        <url-pattern>/go/*</url-pattern>
+    </filter-mapping>
+
+	<filter-mapping>
+        <filter-name>HttpResponseHeaderFilter</filter-name>
+        <url-pattern>/index.html</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>HttpResponseHeaderFilter</filter-name>
+		<url-pattern>/ux-html/*</url-pattern>
+    </filter-mapping>
+	
+
+    <filter-mapping>
+        <filter-name>SingleSignOnFilter</filter-name>
+        <url-pattern>/index.html</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>SingleSignOnFilter</filter-name>
+	<url-pattern>/ux-html/index.html</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>SingleSignOnFilter</filter-name>
+	<url-pattern>/ux-html/debug</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>SingleSignOnFilter</filter-name>
+	<url-pattern>/ux-html/index-dev.html</url-pattern>
+    </filter-mapping>
+    
+    <filter-mapping>
+    	<filter-name>StaticCacheFilter</filter-name>
+    	<url-pattern>*.js</url-pattern>
+    </filter-mapping>
+    
+    <filter-mapping>
+    	<filter-name>CSSCacheFilter</filter-name>
+    	<url-pattern>*.css</url-pattern>
+    </filter-mapping>
+    
+	<filter-mapping>
+        <filter-name>NoCacheFilter</filter-name>
+        <url-pattern>/index.html</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>NoCacheFilter</filter-name>
+		<url-pattern>/ux-html/index.html</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>NoCacheFilter</filter-name>
+		<url-pattern>/ux-html/index-dev.html</url-pattern>
+    </filter-mapping>
+    
+     <filter-mapping>
+    	<filter-name>CORSFilter</filter-name>
+    	<url-pattern>/ux-html/locale/*</url-pattern>
+    </filter-mapping>
+    
+    <filter-mapping>
+    	<filter-name>CORSFilter</filter-name>
+    	<url-pattern>/ux-html/dist/*</url-pattern>
+    </filter-mapping>
+
+    <filter-mapping>
+    	<filter-name>CORSFilter</filter-name>
+    	<url-pattern>/ux-html/lib/single-spa/*</url-pattern>
+    </filter-mapping>
+
+    <filter-mapping>
+    	<filter-name>CORSFilter</filter-name>
+    	<url-pattern>/ux-html/dist_single-spa/*</url-pattern>
+    </filter-mapping>
+	
+	<filter-mapping>
+		<filter-name>CORSFilter</filter-name>
+		<url-pattern>/ux-html/single-spa/microsite-importmap.json</url-pattern>
+	</filter-mapping>
+	
+	<filter-mapping>
+		<filter-name>CORSFilter</filter-name>
+		<url-pattern>/ux-html/ui/import.js</url-pattern>
+	</filter-mapping>
+    
+	<filter-mapping>
+		<filter-name>CompressionFilter</filter-name>
+		<url-pattern>*.html</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>CompressionFilter</filter-name>
+		<url-pattern>*.css</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>CompressionFilter</filter-name>
+		<url-pattern>*.js</url-pattern>
+	</filter-mapping>
+
+	
+	<mime-mapping>
+		<extension>swf</extension>
+		<mime-type>application/x-shockwave-flash</mime-type>
+	</mime-mapping>
+
+	<servlet>
+		<servlet-name>LESSCompiler</servlet-name>
+		<servlet-class>com.opentext.otui.LESSCompiler</servlet-class>
+		<init-param>
+			<param-name>variable-files</param-name>
+			<param-value>ux-html/style/format/variables.less</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>CustomerSpecificDetection</servlet-name>
+		<servlet-class>com.opentext.otui.CustomerSpecificDetection</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>LocaleServlet</servlet-name>
+		<servlet-class>com.opentext.otui.LocaleServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>LESSCompiler</servlet-name>
+		<url-pattern>*.css</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>CustomerSpecificDetection</servlet-name>
+		<url-pattern>/ux-html/customer_specific.html</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>LocaleServlet</servlet-name>
+		<url-pattern>/ux-html/locale/*</url-pattern>
+	</servlet-mapping>
+	
+	<session-config>
+		<cookie-config>
+			<http-only>true</http-only>
+			<secure>true</secure>
+		</cookie-config>
+		<tracking-mode>COOKIE</tracking-mode>
+	</session-config>
+	<error-page>
+        <error-code>404</error-code>
+        <location>/ux-html/error/Error.jsp</location>
+    </error-page>
+    <error-page>
+		<error-code>500</error-code>
+		<location>/ux-html/error/Error.jsp</location>
+	</error-page>
+
+	<security-constraint>
+		<display-name>HTTP Method Restriction</display-name>
+		<web-resource-collection>
+			<web-resource-name>HTTP Method Restriction</web-resource-name>
+			<description>Allow access to only POST and GET methods</description>
+			<url-pattern>/*</url-pattern>
+			<http-method-omission>POST</http-method-omission>
+			<http-method-omission>GET</http-method-omission>
+		</web-resource-collection>
+		<auth-constraint/>
+	</security-constraint>
+</web-app>

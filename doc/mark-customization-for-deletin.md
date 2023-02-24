@@ -29,7 +29,7 @@ Now let's apply our changes in our containerized environment.
 
   ![pgAdmin](../images/k9-delete-pod-otm-0.png) 
       
- * Click `OK` button
+ * Select `OK` button and press `ENTER`
  * Wait until the pod is *terminated* and *running*. It'll take a few minutes.
  
 Now you can access to your OTMM environment. The customization has been deleted.

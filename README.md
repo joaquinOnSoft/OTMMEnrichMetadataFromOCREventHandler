@@ -49,7 +49,7 @@ There are two sub-projects:
   > **NOTE**: You can use the zip file included in the `customization` folder of this repository, or
   > you can follow this manual to [Prepare the customization files for upload](https://docsapi.opentext.com/docs/pi_hosted/_org/ofh1/index.html?/medmgt220400-h-agd-en/prep-upload-cust.html)
   
-  * **Description**: `Must be the same that the customization name`, in our example *OTMMEnrichMetadataFromOCREventHandler-coins-23.02.22*
+  * **Description**: `Must be the same that the customization name`, in our example *OTMMEnrichMetadataFromOCREventHandler-coins-23.02.24*
   * **Type**: `SERVER`
   * **Product**: `OTMM`
    
