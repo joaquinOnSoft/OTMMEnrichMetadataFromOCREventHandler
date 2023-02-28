@@ -50,7 +50,7 @@ There are two sub-projects:
   > **NOTE**: You can use the zip file included in the `customization` folder of this repository, or
   > you can follow this manual to [Prepare the customization files for upload](https://docsapi.opentext.com/docs/pi_hosted/_org/ofh1/index.html?/medmgt220400-h-agd-en/prep-upload-cust.html)
   
-  * **Description**: `Must be the same that the customization name`, in our example *OTMMEnrichMetadataFromOCREventHandler-coins-23.02.24*
+  * **Description**: `Must be the same that the customization name`, in our example *OTMMEnrichMetadataFromOCREventHandler-coins-23.02.28*
   * **Type**: `SERVER`
   * **Product**: `OTMM`
    
@@ -72,7 +72,7 @@ The event listener is registered using the `web.xml` file included in the `custo
 	<listener>
 		<listener-class>com.opentext.otmm.sc.evenlistener.MetadataUpdatedEventListenerRegistration</listener-class>
 	</listener>
-```    
+``` 
 
 > **NOTE**: This method of registering the event listener is a **workaround** meanwhile 
 > an 'official' way to do it's added in *TEAMS's* dashboard.
