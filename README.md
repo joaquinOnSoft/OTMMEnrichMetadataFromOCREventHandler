@@ -3,7 +3,7 @@
 This event is launched once the metadata of an asset are updated.  
 
 > IMPORTANT: These add-ons have been developed and tested on a 
-> containerized **OTMM 22.4** running **TOMEE**
+> containerized **OTMM 22.4** using **TOMEE**
 
 ## Sub-projects 
 There are two sub-projects:

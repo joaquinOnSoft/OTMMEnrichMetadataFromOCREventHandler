@@ -5,19 +5,19 @@ jar {
 	//https://www.baeldung.com/gradle-dependencies-local-jar
 	// Gradle – Create a Jar file with dependencies
 	//https://mkyong.com/gradle/gradle-create-a-jar-file-with-dependencies/
-	
+
+    from {
+    	configurations.compileClasspath.filter{
+    		// println it
+    		it.name.contains("reflections") 
+    	}.collect { it.isDirectory() ? it : zipTree(it) }
+	}
+    	
 	// https://stackoverflow.com/questions/42225363/gradle-include-class-files-from-one-project-in-another        		
 	from (project(':emfo-core').sourceSets.main.output) {
-		include 'com/opentext/otmm/sc/*'		
+		include 'com/opentext/otmm/sc/**'		
 	}
 	
-    from {
-        configurations.compileClasspath.filter{
-        		println it
-				it.name.contains("reflections") 
-			}.collect { it.isDirectory() ? it : zipTree(it) }
-	}
-    
     exclude 'META-INF/*.RSA', 'META-INF/*.SF','META-INF/*.DSA'	
 	duplicatesStrategy = DuplicatesStrategy.EXCLUDE    
 }
